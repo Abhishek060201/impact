@@ -4,7 +4,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Home/Home';
 import './App.css';
 
-const App = () => {
+const App: React.FC= (): JSX.Element => {
   return (
     <div className='app'>
       <BrowserRouter>
