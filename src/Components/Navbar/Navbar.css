@@ -1,0 +1,36 @@
+.navbar {
+  background-color: #008374;
+  padding: 18px 85px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.navbar-brand:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.nav-item {
+  padding: 0 10px;
+}
+
+.nav-link {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #CCE6E3;
+  cursor: pointer;
+}
+
+.nav-link.active {
+  color: white;
+}
+
+.nav-link:hover{
+  color: white;
+}
+

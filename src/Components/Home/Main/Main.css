@@ -1,0 +1,41 @@
+.main {
+  padding-bottom: 255px;
+  position: relative;
+  width: 100%;
+  background-color: #008374;
+  padding: 158px 52.5px 0 52.5px;
+}
+
+.img-1 {
+  position: absolute;  
+  top: 78px;
+}
+
+.img-2 {
+  position: absolute;  
+  top: 78px;
+  right: 52px;
+}
+
+.btn-warning {
+  background-color: #F85A40;
+  border: 2px solid #F85A40;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.btn-warning:hover {
+  background-color: rgba(255, 255, 255, 0);
+  box-sizing: border-box;
+  border: 2px solid white;
+}
+
+/* Highlights */
+.highlights {
+  background-color: #009080;
+  padding: 50px 10px 20px 10px;
+  margin: 0 33px;
+  margin-top: 250px;
+  justify-content: center;
+  border-radius: 10px 10px 0 0;
+}
