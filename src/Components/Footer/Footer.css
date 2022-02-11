@@ -1,0 +1,29 @@
+.about::after {
+  content: '.';
+  color: #F85A40;
+}
+
+.social a {
+  border: none;
+  color: white;
+  background-color: #F85A40;
+  border-radius: 50%;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+
+.social a:hover {
+  cursor: pointer;
+  background-color: #f86d58;
+}
+
+li {
+  color: #6D6D6D;
+  font-family: 'Open Sans';
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.col-2 {
+  padding: 0 0 0 100px;
+}
