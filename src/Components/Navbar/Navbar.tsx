@@ -22,9 +22,23 @@ const Navbar: React.FC = (): JSX.Element => {
               Home
             </Link>
           </li>
-          <li className="nav-item dropdown">
+          <li className="nav-item dropdown" style={{ position: 'relative'}} >
             <a className='nav-link'>Dropdown&nbsp;&nbsp;<i className="fa-solid fa-angle-down fa-xs"></i></a>
-            {/* <img src='src/assets/icons/down.png'/> */}
+
+            <ul className="dropdown-1" style={{ listStyle: 'none' }}>
+              <li>Menu One</li>
+              <li>
+                <span>Menu Two &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <i className="fa-solid fa-chevron-right"></i>
+                <ul className="dropdown-2" style={{ listStyle: 'none' }}>
+                  <li>Sub Menu One</li>
+                  <li>Sub Menu Two</li>
+                  <li>Sub Menu Three</li>
+                </ul>
+              </li>
+              <li>Menu Three</li>
+            </ul>
+
           </li>
           <li className="nav-item">
             <Link

@@ -1,9 +1,9 @@
 import React from 'react';
 import Main from './Main/Main';
-import WhyUs from './WhyUs/WhyUs';
+import WhyUs from './WhyUs';
 import GrowingBusiness from './GrowingBusiness/GrowingBusiness';
 import Reviews from './Reviews/Reviews';
-import Blogs from './Blogs/Blogs';
+import Blogs from './Blogs';
 import './Home.css';
 
 const Home: React.FC = (): JSX.Element => {

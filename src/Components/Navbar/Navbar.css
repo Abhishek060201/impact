@@ -18,6 +18,10 @@
   padding: 0 10px;
 }
 
+.nav-item:active {
+  color: white;
+}
+
 .nav-link {
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9rem;
@@ -32,5 +36,51 @@
 
 .nav-link:hover{
   color: white;
+}
+
+a:active{
+  color: white;
+}
+
+.dropdown li {
+  color: black;
+}
+
+.dropdown-1 {
+  z-index: 1;
+  top: 100%;
+  width: 150%;
+  padding: 20px 30px;
+  color: black;
+  background-color: white;
+  position: absolute;
+  display: none;
+}
+
+.dropdown:hover > ul {
+  display: block;
+}
+
+.dropdown-1 > li:hover {
+  color: #F65A40;
+}
+
+.dropdown-2 {
+  z-index: 1;
+  left: 100%;
+  width: 100%;
+  padding: 20px 30px;
+  color: black;
+  background-color: white;
+  position: absolute;
+  display: none;
+}
+
+.dropdown-1 > li:nth-child(2):hover > .dropdown-2 {
+  display: block;
+}
+
+.dropdown-2 > li:hover {
+  color: #F65A40;
 }
 

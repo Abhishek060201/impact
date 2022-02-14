@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Carousel } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import './Reviews.css';
 
 const Reviews: React.FC = (): JSX.Element => {
@@ -10,7 +10,7 @@ const Reviews: React.FC = (): JSX.Element => {
   };
 
   return (
-    <Carousel className='bg-light' style={{ color: 'black', padding: '100px 0' }} activeIndex={index} onSelect={handleSelect}>
+    <Carousel variant='dark' className='bg-light' style={{ color: 'black', padding: '100px 0' }} activeIndex={index} onSelect={handleSelect}>
 
       <Carousel.Item className='row'> 
         <div className='mb-5 mx-auto d-flex justify-content-center align-content-center' style={{ width: '110px', height: '110px', backgroundColor: 'white', borderRadius: '50%' }}>
