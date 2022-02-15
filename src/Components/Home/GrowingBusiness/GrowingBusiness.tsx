@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import ModalVideo from 'react-modal-video';
+import "react-modal-video/scss/modal-video.scss";
+// import './GrowingBusiness.css';
 
 const GrowingBusiness: React.FC = (): JSX.Element => {
-
   const [isOpen, setOpen] = useState(false);
 
   return (
@@ -12,7 +13,12 @@ const GrowingBusiness: React.FC = (): JSX.Element => {
         <p style={{ lineHeight: '2', fontSize: 'small', fontFamily: 'Open Sans' }}>
           Labore id odit sit optio, voluptas sequi nobis aliquid dignissimos iure recusandae vitae nam facere hic quis voluptate cum quae. Deserunt, harum, incidunt ex nesciunt est temporibus ipsum, vel rem eveniet facere et velit sunt aspernatur eaque quis, dolorem magnam quisquam? Facere?
         </p>
-        <button className='mt-2' style={{ padding: '12px 30px', color: 'white', fontFamily: 'Open Sans', backgroundColor: '#F85A40', border: 'none', borderRadius: '3px' }}>Learn More</button>
+        <button
+          className='mt-2'
+          style={{ padding: '12px 30px', color: 'white', fontFamily: 'Open Sans', backgroundColor: '#F85A40', border: 'none', borderRadius: '3px' }}
+        >
+          Learn More
+        </button>
       </div>
       <div className='col-lg-7'>
         <img src='images/illustration-1.jpg' width='100%' />
@@ -69,7 +75,15 @@ const GrowingBusiness: React.FC = (): JSX.Element => {
           </a>
         </div>
 
-        <ModalVideo style={{ position: 'absolute' }} channel='youtube' autoplay isOpen={isOpen} videoId="KI2lsdXJQ40" onClose={() => setOpen(false)} />
+        {/* Pop-up video Player */}
+        <ModalVideo
+          style={{ position: 'absolute' }}
+          channel='youtube'
+          autoplay
+          isOpen={isOpen}
+          videoId="KI2lsdXJQ40"
+          onClose={() => setOpen(false)}
+        />
 
         <div className='col-lg-5 my-auto'>
           <h2 className='mb-4 fw-bold'>Get Started with Impact</h2>

@@ -55,7 +55,7 @@ a:active{
   background-color: white;
   position: absolute;
   display: none;
-}
+} 
 
 .dropdown:hover > ul {
   display: block;
@@ -83,4 +83,30 @@ a:active{
 .dropdown-2 > li:hover {
   color: #F65A40;
 }
+
+.navbar-expand-lg .offcanvas {
+  display: none;
+  width: 300px;
+}
+
+.nav-toggler {
+  display: none;
+}
+
+.offcanvas-body Link:hover {
+  color: #F65A40;
+}
+
+@media only screen and (max-width: 992px) {
+  .nav-toggler {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar {
+    padding: 18px 25px;
+  }
+}
+
 
