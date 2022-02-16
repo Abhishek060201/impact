@@ -38,8 +38,9 @@
   color: white;
 }
 
-a:active {
-  color: white;
+a:active,
+a:focus {
+  color: white !important;
 }
 
 .dropdown li {
@@ -94,17 +95,15 @@ a:active {
   color: #f65a40;
 }
 
-.navbar-expand-lg .offcanvas {
-  display: none;
+.offcanvas {
   width: 300px;
+  transform: translateX(100%);
+  display: none;
+  visibility: visible;
 }
 
 .nav-toggler {
   display: none;
-}
-
-.offcanvas-body Link:hover {
-  color: #f65a40;
 }
 
 .carousel-control-prev-icon {
@@ -130,6 +129,9 @@ a:active {
 
 @media only screen and (max-width: 992px) {
   .nav-toggler {
+    display: block;
+  }
+  .offcanvas {
     display: block;
   }
 }

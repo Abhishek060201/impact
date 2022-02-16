@@ -30,6 +30,19 @@
   border: 2px solid white;
 }
 
+
+.btn-warning:focus {
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid white;
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-warning:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 /* Highlights */
 .highlights {
   background-color: #009080;

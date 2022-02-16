@@ -4,7 +4,6 @@ import WhyUs from './WhyUs';
 import GrowingBusiness from './GrowingBusiness/GrowingBusiness';
 import Reviews from './Reviews/Reviews';
 import Blogs from './Blogs';
-import './Home.css';
 
 const Home: React.FC = (): JSX.Element => {
   return (
