@@ -4,7 +4,7 @@ const WhyUs: React.FC = (): JSX.Element => {
   return (
     <div className='row d-flex justify-content-center px-sm-3 px-md-5' style={{ margin: '0', padding: '110px 20px', width: '100%', backgroundColor: '#FAFAFA', color: '#212529' }}>
 
-      <div className="row px-sm-5">
+      <div className="row d-flex justify-content-between px-sm-5 ">
         <div className='left col-lg-5'>
           <h3 className='mb-5 fw-bold' style={{ fontSize: '1.85rem' }}>Why You Should Choose Us</h3>
 
