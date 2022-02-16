@@ -23,7 +23,7 @@ const Navbar: React.FC = (): JSX.Element => {
       setTimeout(() => {
         sidebar.style.visibility = 'hidden';
         sidebar.style.display = 'none';
-      }, 1000);
+      }, 300);
     }
   }
 
@@ -36,15 +36,43 @@ const Navbar: React.FC = (): JSX.Element => {
     }
   }
 
+  const toggleSidebarDropdown1 = () => {
+    const dropdown = document.querySelector<HTMLElement>('.sidebar-dropdown-1');
+    if (dropdown) {
+      if (dropdown.style.display === 'none')
+        dropdown.style.display = 'block';
+      else
+        dropdown.style.display = 'none';
+    }
+  }
+
+  const toggleSidebarDropdown2 = () => {
+    const dropdown = document.querySelector<HTMLElement>('.sidebar-dropdown-2');
+    if (dropdown) {
+      if (dropdown.style.display === 'none')
+        dropdown.style.display = 'block';
+      else
+        dropdown.style.display = 'none';
+    }
+  }
+
   return (
     <div className="navbar navbar-expand-lg">
       {/* logo */}
       <a className="navbar-brand">Impact</a>
 
-      {/* OffCanvas */}
-      <div className="offcanvas offcanvas-end" id="offcanvas" style={{ zIndex: '10' }}>
+      {/* OffCanvas (Navbar for smaller screens) */}
+      <div
+        className="offcanvas offcanvas-end"
+        id="offcanvas"
+        style={{ zIndex: '10' }}>
         <div className="offcanvas-header d-flex justify-content-end">
-          <button onClick={hideSidebar} type="button" className="btn-close" data-bs-dismiss="offcanvas"></button>
+          <button
+            onClick={hideSidebar}
+            type="button"
+            className="btn-close"
+            data-bs-dismiss="offcanvas"
+          />
         </div>
         <div className="offcanvas-body px-4">
           <ul className='navbar-nav ms-auto'>
@@ -56,15 +84,34 @@ const Navbar: React.FC = (): JSX.Element => {
                 Home
               </Link>
             </li>
-            <li className="nav-item dropdown" style={{ position: 'relative' }} >
-              <a className='nav-link text-body'>Dropdown&nbsp;&nbsp;<i className="fa-solid fa-angle-down fa-xs"></i></a>
+            <li
+              className="nav-item dropdown"
+              style={{ position: 'relative' }}
+            >
+              <a
+                className='nav-link text-body d-flex justify-content-between align-items-center'
+                onClick={toggleSidebarDropdown1}
+              >
+                <div>Dropdown</div>
+                <i className="fa-solid fa-angle-down fa-xs"></i>
+              </a>
 
-              <ul className="dropdown-1" style={{ left: '0%', listStyle: 'none' }}>
+              <ul
+                className="sidebar-dropdown-1"
+                style={{ width: '100%', padding: '5px 20px 0 20px', listStyle: 'none', display: 'none' }}>
                 <li>Menu One</li>
                 <li>
-                  <span>Menu Two &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                  <i className="fa-solid fa-angle-down fa-xs"></i>
-                  <ul className="dropdown-2" style={{ position: 'absolute', left: '0px', listStyle: 'none' }}>
+                  <a
+                    className='d-flex justify-content-between align-items-center text-body text-decoration-none'
+                    onClick={toggleSidebarDropdown2}
+                  >
+                    <div>Menu Two</div>
+                    <i className="fa-solid fa-angle-down fa-xs"></i>
+                  </a>
+                  <ul
+                    className="sidebar-dropdown-2"
+                    style={{ padding: '5px 20px 0 20px', listStyle: 'none', display: 'none' }}
+                  >
                     <li className='text-body'>Sub Menu One</li>
                     <li>Sub Menu Two</li>
                     <li>Sub Menu Three</li>
@@ -110,14 +157,21 @@ const Navbar: React.FC = (): JSX.Element => {
         </div>
       </div>
 
-      {/* Open button */}
-      <button className="nav-toggler" type="button" onMouseLeave={buttonUnSqueeze} onMouseOver={buttonSqueeze} onClick={showSidebar} style={{ border: 'none', padding: '0', backgroundColor: 'rgba(0, 0, 0, 0)' }}>
+      {/* Open Side Navbar Toggler */}
+      <button
+        className="nav-toggler"
+        type="button"
+        onMouseOver={buttonSqueeze}
+        onMouseLeave={buttonUnSqueeze}
+        onClick={showSidebar}
+        style={{ border: 'none', padding: '0', backgroundColor: 'rgba(0, 0, 0, 0)' }}
+      >
         <div style={{ backgroundColor: 'white', width: '30px', height: '2px', margin: '9px 0' }}></div>
         <div style={{ backgroundColor: 'white', width: '30px', height: '2px', margin: '9px 0' }}></div>
         <div style={{ backgroundColor: 'white', width: '30px', height: '2px', margin: '9px 0' }}></div>
       </button>
 
-      {/* link container */}
+      {/* Navbar for large screens */}
       <div className='collapse navbar-collapse' id='mynavbar'>
         <ul className='navbar-nav ms-auto'>
           <li className="nav-item">
@@ -132,17 +186,17 @@ const Navbar: React.FC = (): JSX.Element => {
             <a className='nav-link'>Dropdown&nbsp;&nbsp;<i className="fa-solid fa-angle-down fa-xs"></i></a>
 
             <ul className="dropdown-1" style={{ listStyle: 'none' }}>
-              <li>Menu One</li>
-              <li>
+              <li style={{ padding: '0 30px' }}>Menu One</li>
+              <li style={{ padding: '0 30px', position: 'relative' }}>
                 <span>Menu Two &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <i className="fa-solid fa-chevron-right"></i>
-                <ul className="dropdown-2" style={{ listStyle: 'none' }}>
+                <ul className="dropdown-2" style={{ listStyle: 'none', width: '200px' }}>
                   <li>Sub Menu One</li>
                   <li>Sub Menu Two</li>
                   <li>Sub Menu Three</li>
                 </ul>
               </li>
-              <li>Menu Three</li>
+              <li style={{ padding: '0 30px' }}>Menu Three</li>
             </ul>
 
           </li>

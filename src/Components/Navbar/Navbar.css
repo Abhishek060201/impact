@@ -23,10 +23,10 @@
 }
 
 .nav-link {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
-  color: #CCE6E3;
+  color: #cce6e3;
   cursor: pointer;
 }
 
@@ -34,11 +34,11 @@
   color: white;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: white;
 }
 
-a:active{
+a:active {
   color: white;
 }
 
@@ -46,27 +46,37 @@ a:active{
   color: black;
 }
 
+.btn-close:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-close {
+  box-shadow: none !important;
+}
+
 .dropdown-1 {
   z-index: 1;
   top: 100%;
   width: 150%;
-  padding: 20px 30px;
+  padding: 20px 0;
   color: black;
   background-color: white;
   position: absolute;
   display: none;
-} 
+}
 
 .dropdown:hover > ul {
   display: block;
 }
 
 .dropdown-1 > li:hover {
-  color: #F65A40;
+  color: #f65a40;
 }
 
 .dropdown-2 {
   z-index: 1;
+  top: 0%;
   left: 100%;
   width: 100%;
   padding: 20px 30px;
@@ -81,7 +91,7 @@ a:active{
 }
 
 .dropdown-2 > li:hover {
-  color: #F65A40;
+  color: #f65a40;
 }
 
 .navbar-expand-lg .offcanvas {
@@ -94,7 +104,28 @@ a:active{
 }
 
 .offcanvas-body Link:hover {
-  color: #F65A40;
+  color: #f65a40;
+}
+
+.carousel-control-prev-icon {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.carousel-control-next-icon {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.carousel-indicators button {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50%;
+  background-color: gray !important;
+}
+
+.carousel-indicators button.active {
+  background-color: #f65a40 !important;
 }
 
 @media only screen and (max-width: 992px) {
@@ -108,5 +139,3 @@ a:active{
     padding: 18px 25px;
   }
 }
-
-
