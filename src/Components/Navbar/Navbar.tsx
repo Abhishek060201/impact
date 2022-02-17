@@ -90,7 +90,7 @@ const Navbar: React.FC = (): JSX.Element => {
               <li style={{ padding: '0 30px', position: 'relative' }}>
                 <span>Menu Two &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <i className="fa-solid fa-chevron-right"></i>
-                <ul className="dropdown-2" style={{ listStyle: 'none', width: '200px' }}>
+                <ul className="dropdown-2" style={{ listStyle: 'none', width: '200px', boxShadow: '1px 1px 10px rgba(0, 0, 0, 0.2)' }}>
                   <li>Sub Menu One</li>
                   <li>Sub Menu Two</li>
                   <li>Sub Menu Three</li>
@@ -128,7 +128,7 @@ const Navbar: React.FC = (): JSX.Element => {
             <Link
               className='nav-link'
               to='/'
-            >
+            > 
               Contact Us
             </Link>
           </li>

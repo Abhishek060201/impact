@@ -64,7 +64,7 @@ const GrowingBusiness: React.FC = (): JSX.Element => {
 
       </div>
 
-      <div className='row mx-auto d-flex justify-content-lg-between' style={{ width: '100%' }}>
+      <div className='row mx-auto d-flex justify-content-lg-between flex-column-sm-reverse' style={{ width: '100%' }}>
 
         <div className='col-lg-6 mb-3' >
           <a onClick={() => setOpen(true)} style={{ position: 'relative', cursor: 'pointer' }}>
@@ -74,16 +74,6 @@ const GrowingBusiness: React.FC = (): JSX.Element => {
             </span>
           </a>
         </div>
-
-        {/* Pop-up video Player */}
-        <ModalVideo
-          style={{ position: 'absolute' }}
-          channel='youtube'
-          autoplay
-          isOpen={isOpen}
-          videoId="KI2lsdXJQ40"
-          onClose={() => setOpen(false)}
-        />
 
         <div className='col-lg-5 my-auto'>
           <h2 className='mb-4 fw-bold'>Get Started with Impact</h2>
@@ -99,6 +89,16 @@ const GrowingBusiness: React.FC = (): JSX.Element => {
           </ul>
           <button className='mt-2' style={{ padding: '12px 30px', color: 'white', fontFamily: 'Open Sans', backgroundColor: '#F85A40', border: 'none', borderRadius: '3px' }}>Learn More</button>
         </div>
+
+        {/* Pop-up video Player */}
+        <ModalVideo
+          style={{ position: 'absolute' }}
+          channel='youtube'
+          autoplay
+          isOpen={isOpen}
+          videoId="KI2lsdXJQ40"
+          onClose={() => setOpen(false)}
+        />
 
       </div>
 
